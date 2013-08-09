@@ -100,6 +100,7 @@ module ApiAuth
             arguments.last['Content-MD5'] = tmp['Content-MD5'] if tmp['Content-MD5']
             arguments.last['DATE'] = tmp['DATE']
             arguments.last['Authorization'] = tmp['Authorization']
+            arguments.last['HMAC_AUTH'] = tmp['HMAC_AUTH']
           end
         
           request_without_auth(method, path, *arguments)

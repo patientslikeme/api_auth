@@ -62,7 +62,7 @@ module ApiAuth
       end
 
       def authorization_header
-        find_header %w(HMAC_AUTH AUTHORIZATION HTTP_AUTHORIZATION)
+        find_header %w(HTTP_HMAC_AUTH AUTHORIZATION HTTP_AUTHORIZATION)
       end
 
     private
