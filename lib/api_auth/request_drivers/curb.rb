@@ -13,7 +13,7 @@ module ApiAuth
       end
 
       def set_auth_header(header)
-        @request.headers.merge!({ "HMAC_AUTH" => header })
+        @request.headers.merge!({ "HMAC-AUTH" => header })
         @headers = fetch_headers
         @request
       end
@@ -54,7 +54,7 @@ module ApiAuth
       end
 
       def authorization_header
-        find_header %w(HMAC_AUTH HTTP_HMAC_AUTH)
+        find_header %w(HMAC_AUTH HMAC-AUTH HTTP_HMAC_AUTH)
       end
 
     private
